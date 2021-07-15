@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Add To Cart | Tapesh </title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left side div  -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4 my-3">
+                            <h2 class="py-4 font-weight-bold">Cart(2 items)</h2>
+                            <div class="row">
+                                <!-- cart images div  -->
+                                <div
+                                    class="col-md-3 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src="img/1.jpg" class="img-fluid" alt="cart img">
+                                </div>
+
+                                <!-- product deatils  -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name  -->
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">Blue Shirt</h1>
+                                            <p class="mb-2">Shirt - Blue</p>
+                                            <p class="mb-2">color: - Blue</p>
+                                            <p class="mb-3">size - M</p>
+                                        </div>
+
+                                        <!-- quantity inc decr  -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="decreaseNumber('textbox1', 'itemval')"><i
+                                                            class="fas fa-minus"></i></button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <input type="text" class="page-link" value="0" id="textbox1"></input>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="increaseNumber('textbox1', 'itemval')"><i
+                                                            class="fas fa-plus"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- remove move price  -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fas fa-trash-alt"></i> Remove Item</p>
+                                            <p><i class="fas fa-heart"></i> Move to wish list</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$ <span id="itemval">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- 2nd card product  -->
+                        <div class="card p-4 my-3">
+                            <div class="row">
+                                <!-- cart images div  -->
+                                <div
+                                    class="col-md-3 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src="img/2.jpg" class="img-fluid" alt="cart img">
+                                </div>
+
+                                <!-- product deatils  -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name  -->
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">Red Kurti</h1>
+                                            <p class="mb-2">Kurti - red</p>
+                                            <p class="mb-2">color: - red</p>
+                                            <p class="mb-3">size - L</p>
+                                        </div>
+
+                                        <!-- quantity inc decr  -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="decreaseNumber('textbox', 'itemval1')"><i
+                                                            class="fas fa-minus"></i></button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <input type="text" class="page-link" value="0"
+                                                        id="textbox"></input>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="increaseNumber('textbox', 'itemval1')"><i
+                                                            class="fas fa-plus"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- remove move price  -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fas fa-trash-alt"></i> Remove Item</p>
+                                            <p><i class="fas fa-heart"></i> Move to wish list</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$ <span id="itemval1">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- right side div  -->
+                    <div class="col-md-12 col-lg-4 col-11 mt-lg-0 mx-auto mt-md-5">
+                        <div class="right_side p-3 shadow rightside">
+                            <h2 class="product_name mb-5">The Total Amount Of</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product Amount</p>
+                                <p>$<span id="product_total_amt">0.00</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shipping Amount</p>
+                                <p>$ <span id="shipping_charge">5.0</span></p>
+                            </div>
+                            <hr>
+                            <div class="total_amt d-flex justify-content-between fw-bold">
+                                <p>The total amount of (including VAT)</p>
+                                <p>$<span id="total_cart_amt">0.00</span></p>
+                            </div>
+                            <button class="btn btn-primary btn-sm text-uppercase btn-tap">checkout</button>
+                        </div>
+                        <!-- discount code part  -->
+                        <div class="discount_code mt-3 shadow">
+                            <div class="card">
+                                <div class="card-body">
+                                        <a class="d-flex justify-content-between" data-bs-toggle="collapse"
+                                            href="#collapseExample" role="button" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Add a discount code <span><i class="fas fa-chevron-down pt-1"></i></span>
+                                        </a>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="mt-3">
+                                            <input type="text" id="discount_code1" class="form-control mb-3"
+                                                placeholder="Enter Coupon Code Here">
+                                            <small id="error_trw"> Code is TAP2020</small>
+                                        </div>
+
+                                        <button class="btn btn-primary btn-sm mt-3 btn-tap"
+                                            onclick="discount_code()">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- discount code end  -->
+                        <div class="mt-3 shadow p-3 rightside">
+                            <div class="pt-4 d-flex justify-content-center">
+                                <h5>Expected delivery date</i></h5>
+                                <p> July 27th 2021 -  July 29th 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
